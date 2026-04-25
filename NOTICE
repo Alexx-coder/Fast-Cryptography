@@ -1,0 +1,25 @@
+fast-cryptography
+
+Copyright (c) 2026 Alexx-coder
+
+This product includes software developed by:
+
+- cryptography (https://github.com/pyca/cryptography)
+  Copyright (c) 2014-2026 Individual contributors
+  Licensed under Apache License 2.0
+
+- pycryptodome (https://github.com/Legrandin/pycryptodome)
+  Copyright (c) 2008-2024 Helder Eijs
+  Licensed under BSD 2-Clause License
+
+- base58 (https://github.com/keis/base58)
+  Copyright (c) 2017 David Keijser
+  Licensed under MIT License
+
+- numpy (https://github.com/numpy/numpy)
+  Copyright (c) 2005-2026 NumPy Developers
+  Licensed under BSD 3-Clause License
+
+- base45 (https://github.com/kirei/python-base45)
+  Copyright (c) 2021-2024 Martijn Luyckx
+  Licensed under BSD 2-Clause License
