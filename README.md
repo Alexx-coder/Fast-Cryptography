@@ -14,6 +14,8 @@
 
 > **[Fast-Cryptography on Github](https://github.com/Alexx-coder/Fast-Cryptography.git)**
 
+> **[Fast-Cryptography on PyPi](https://pypi.org/project/fast-cryptography/)**
+
 > **Install:**
 
 ```bash
