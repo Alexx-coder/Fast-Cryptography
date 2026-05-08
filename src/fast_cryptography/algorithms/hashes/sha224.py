@@ -1,9 +1,8 @@
 import secrets
 import hashlib
 
-def hash_sha224(message: str, byte: int) -> str:
-    """SHA-224 Hash Function"""
-    salt = secrets.token_bytes(byte)
-    return hashlib.sha224(message + salt.encode()).hexdigest()
-
-    
+def hash_sha224(message: str, salt_bytes: int = 32) -> tuple:
+    """SHA-224 Hash Function with salt"""
+    salt = secrets.token_bytes(salt_bytes)
+    hash_result = hashlib.sha224(message.encode() + salt).hexdigest()
+    return hash_result, salt.hex()

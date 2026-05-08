@@ -5,7 +5,7 @@ import base64
 
 def gen_keys_pem() -> dict:
     """Generates an Ed25519 key pair in PEM format"""
-    private_key = ed25519.Ed25519PrivateKey()
+    private_key = ed25519.Ed25519PrivateKey.generate()
     public_key = private_key.public_key()
 
     private_pem = private_key.private_bytes(

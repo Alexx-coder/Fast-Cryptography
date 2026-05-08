@@ -1,5 +1,5 @@
 # **Fast-Cryptography**
-[![Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![PyPI version](https://img.shields.io/pypi/v/fast-cryptography.svg)](https://pypi.org/project/fast-cryptography/)
 
 
 
@@ -8,7 +8,7 @@
 
 > **Developer: `Alexx-coder or alexx (GitHub)`**
 
-> **Version: `0.1.1`**
+> **Version: `0.1.2`**
 
 > **License: `Apache License 2.0`**
 
@@ -654,26 +654,22 @@ from fast_cryptography.algorithms.hashes.sha3_512 import hash_sha3_512
 from fast_cryptography.algorithms.hashes.blake2b import hash_blake2b
 from fast_cryptography.algorithms.hashes.blake2s import hash_blake2s
 
+message = 'Your message'
+size = 32
 
-message = 'Your message' # Replace it with your message
-size = 32 # Bytes for salt. You can use 16-64 bytes. But you'd better use it 32 bytes
+# Список хэш-функций
+hashes = [
+    hash_md4, hash_md5, hash_ripemd160,
+    hash_sha1, hash_sha224, hash_sha256,
+    hash_sha384, hash_sha512,
+    hash_sha3_224, hash_sha3_256, hash_sha3_384, hash_sha3_512,
+    hash_blake2b, hash_blake2s
+]
 
-hash_sha256(message, size) 
-hash_sha512(message, size)
-hash_sha384(message, size)
-hash_sha224(message, size)
-hash_sha1(message, size)
-hash_sha3_256(message, size)
-hash_sha3_512(message, size)
-hash_sha3_384(message, size)
-hash_sha3_224(message, size)
-hash_blake2b(message, size)
-hash_blake2s(message, size)
-hash_md5(message, size)
-hash_md4(message, size)
-hash_ripemd160(message, size)
-
-# WARNINGS!!! Don't forget to specify the message and the salt size.
+print("=== Testing hashes ===\n")
+for h in hashes:
+    hash_val, salt = h(message, size)
+    print(f"{h.__name__} | {hash_val}... | Salt: {salt}...")
 ```
 
 ## Cryptorandom

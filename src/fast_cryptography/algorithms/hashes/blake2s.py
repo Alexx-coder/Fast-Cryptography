@@ -1,9 +1,8 @@
 import secrets
 import hashlib
 
-def hash_blake2s(message: str, byte: int) -> str:
-    """Blake2s Hash Function"""
-    salt = secrets.token_bytes(byte)
-    return hashlib.blake2s(message + salt.encode()).hexdigest()
-
-    
+def hash_blake2s(message: str, salt_bytes: int = 32) -> tuple:
+    """Blake2s Hash Function with salt"""
+    salt = secrets.token_bytes(salt_bytes)
+    hash_result = hashlib.blake2s(message.encode() + salt).hexdigest()
+    return hash_result, salt.hex()
