@@ -18,28 +18,28 @@ from .algorithms.encoding.base45 import encode as base45_encode, decode as base4
 from .algorithms.scripts.password import auth, verify
 from .algorithms.scripts.what_encoding import what_encoding
 
-from algorithms.hashes.md4 import hash_md4
-from algorithms.hashes.md5 import hash_md5
-from algorithms.hashes.ripemd160 import hash_ripemd160
-from algorithms.hashes.sha1 import hash_sha1
-from algorithms.hashes.sha224 import hash_sha224
-from algorithms.hashes.sha256 import hash_sha256
-from algorithms.hashes.sha384 import hash_sha384
-from algorithms.hashes.sha512 import hash_sha512
-from algorithms.hashes.sha3_224 import hash_sha3_224
-from algorithms.hashes.sha3_256 import hash_sha3_256
-from algorithms.hashes.sha3_384 import hash_sha3_384
-from algorithms.hashes.sha3_512 import hash_sha3_512
-from algorithms.hashes.blake2b import hash_blake2b
-from algorithms.hashes.blake2s import hash_blake2s
+from .algorithms.hashes.md4 import hash_md4
+from .algorithms.hashes.md5 import hash_md5
+from .algorithms.hashes.ripemd160 import hash_ripemd160
+from .algorithms.hashes.sha1 import hash_sha1
+from .algorithms.hashes.sha224 import hash_sha224
+from .algorithms.hashes.sha256 import hash_sha256
+from .algorithms.hashes.sha384 import hash_sha384
+from .algorithms.hashes.sha512 import hash_sha512
+from .algorithms.hashes.sha3_224 import hash_sha3_224
+from .algorithms.hashes.sha3_256 import hash_sha3_256
+from .algorithms.hashes.sha3_384 import hash_sha3_384
+from .algorithms.hashes.sha3_512 import hash_sha3_512
+from .algorithms.hashes.blake2b import hash_blake2b
+from .algorithms.hashes.blake2s import hash_blake2s
 
 from .algorithms.cryptorandom.byte import bytes_token, bytes_urandom, bytes_uuid, bytes_random
 from .algorithms.cryptorandom.hex_bytes import hex_token, hex_token_bytes, encode_hex, decode_hex, hex2text, text2hex, is_valid_hex
-from algorithms.cryptorandom.choice import crypto_choice, random_choice, random_choices, scientific_choice
-from algorithms.cryptorandom.randint import crypto_randbelow, crypto_randint, random_randint
-from algorithms.cryptorandom.salt import salt_gen, salt_gen_hex
-from algorithms.cryptorandom.nonce import nonce_gen, nonce_gen_hex
-from algorithms.cryptorandom.iv import iv_gen, iv_gen_hex
+from .algorithms.cryptorandom.choice import crypto_choice, random_choice, random_choices, scientific_choice
+from .algorithms.cryptorandom.randint import crypto_randbelow, crypto_randint, random_randint
+from .algorithms.cryptorandom.salt import salt_gen, salt_gen_hex
+from .algorithms.cryptorandom.nonce import nonce_gen, nonce_gen_hex
+from .algorithms.cryptorandom.iv import iv_gen, iv_gen_hex
 
 __all__ = [
     # Asymmetric

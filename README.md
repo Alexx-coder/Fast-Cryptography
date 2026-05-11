@@ -8,7 +8,7 @@
 
 > **Developer: `Alexx-coder or alexx (GitHub)`**
 
-> **Version: `0.1.2`**
+> **Version: `0.1.3`**
 
 > **License: `Apache License 2.0`**
 
